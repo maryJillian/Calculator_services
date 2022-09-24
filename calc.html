@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Калькулятор</title>
+  <link rel="stylesheet" href="t/css/jquery-ui.css">
+  <link rel="stylesheet" href="t/css/styles.css">
+  <link rel="stylesheet" href="t/css/calc.css">
+</head>
+<body>
+<section class="main-calc">
+  <div class="wrap">
+    <h2 class="white block_h">is: <span class="tilda-wr"><span class="tilda">а</span>пгрейдим</span> бизнес</h2>
+    <h4>Рассчитайте стоимость наших услуг самостоятельно!</h4>
+    <ul class="tabs main-calc__tabs dragscroll">
+      <li class="main-calc__tab active"><a href="#main-calc-startup">
+        <div class="main-calc__tab-title">Для стартапов</div>
+        <div class="main-calc__tab-strip"></div>
+      </a></li>
+      <li class="main-calc__tab"><a href="#main-calc-small">
+        <div class="main-calc__tab-title">Малый бизнес</div>
+        <div class="main-calc__tab-strip"></div>
+      </a></li>
+      <li class="main-calc__tab"><a href="#main-calc-big">
+        <div class="main-calc__tab-title">Средний и крупный бизнес</div>
+        <div class="main-calc__tab-strip"></div>
+      </a></li>
+    </ul>
+    <div class="main-calc__container">
+      <div id="main-calc-startup" class="tab_content main-calc__content active-tab">
+        <div class="main-calc__left">
+          <div class="main-calc__left-content">
+            <div class="main-calc__left-header">Как мы можем вам помочь?</div>
+            <form>
+              <div class="main-calc__left-check-block">
+                <label class="main-calc__left-check">Аудит вашего бренда или рекламной кампании
+                  <input type="checkbox" class="check-highload" name="highload" value="12000">
+                  <input type="text" class="check-highload-hidden" name="label1" value="Аудит вашего бренда или рекламной кампании">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>12000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Консультация по маркетингу
+                  <input type="checkbox" class="check-highload" name="highload" value="12000">
+                  <input type="text" class="check-highload-hidden" name="label2" value="Консультация по маркетингу">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>12000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Ведение социальных сетей
+                  <input type="checkbox" class="check-highload" name="highload" value="35000">
+                  <input type="text" class="check-highload-hidden" name="label3" value="Ведение социальных сетей">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>35000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Ведение рекламы в Я.Директ
+                  <input type="checkbox" class="check-highload" name="highload" value="45000">
+                  <input type="text" class="check-highload-hidden" name="label4" value="Ведение рекламы в Я.Директ">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>45000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Разработка названия
+                  <input type="checkbox" class="check-highload" name="highload" value="40000">
+                  <input type="text" class="check-highload-hidden" name="label5" value="Разработка названия">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>40000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Разработка презентации
+                  <input type="checkbox" class="check-highload" name="highload" value="20000">
+                  <input type="text" class="check-highload-hidden" name="label6" value="Разработка презентации">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>20000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Создание лендинга на тильда
+                  <input type="checkbox" class="check-highload" name="highload" value="90000">
+                  <input type="text" class="check-highload-hidden" name="label7" value="Создание лендинга на тильда">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>90000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Создание сайта-многостраничника на тильда
+                  <input type="checkbox" class="check-highload" name="highload" value="145000">
+                  <input type="text" class="check-highload-hidden" name="label8" value="Создание сайта-многостраничника на тильда">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>145000</span> рублей</div>
+                </label>
+              </div>
+              <div class="main-calc__left-header main-calc__left-header--middle">Примерный бюджет в месяц на рекламу
+              </div>
+              <div class="main-calc__left-price-gradient">
+                <span class="main-calc__left-price"><span id="main-calc-range-price-1">60 000</span> рублей</span>
+              </div>
+              <div id="range-1" class="main-calc-range"></div>
+              <div class="main-calc__left-range">
+                <div class="main-calc__left-range--sum">30 000 руб.</div>
+                <div class="main-calc__left-range--sum">100 000 руб.</div>
+              </div>
+              <div class="main-calc__left-btn">
+                <a href="#calc-total-startup" class="main-calc__left-btn--culc">Рассчитать</a>
+                <div class="main-calc__left-btn--reset">Сбросить</div>
+              </div>
+            </form>
+          </div>
+          <div class="main-calc__left-description">
+            <div>Для рекламного бюджета более 100 000 рублей стоимость услуг считается дополнительно</div>
+          </div>
+        </div>
+        <div class="main-calc__right">
+          <div class="main-calc__right-content nano">
+            <div class="nano-content">
+              <div class="main-calc__right-img">Для расчета задайте<br>условия</div>
+              <div class="main-calc__right-item">
+                <h3>Аудит вашего бренда или рекламной кампании, 12 000 руб</h3>
+                <ul>
+                  <li>Первичное интервью с клиентом, определение целей и задач проекта</li>
+                  <li>Исследование и проведение аудита, подготовка итоговой презентации</li>
+                  <li>Встреча 1,5 часа с презентацией аудита</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Консультация по маркетингу, 12 000 руб</h3>
+                <ul>
+                  <li>Помощь по маркетинговой и диджитал-стратегии, по доработке продукта</li>
+                  <li>Исследование, маркетинговое проектирование, подготовка итоговой презентации</li>
+                  <li>Встреча 1,5 часа с презентацией маркетинговой работы</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Ведение социальных сетей, 35 000 руб/мес</h3>
+                <ul>
+                  <li>Создание контент-плана и выстраивание коммуникации в сети</li>
+                  <li>1 соцсеть, 2 поста в неделю, сочный визуал</li>
+                  <li>Усиленная монетизация – настройка таргетированной рекламы, 20 000/мес</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Ведение рекламы в Я.директ, 45 000 руб/мес</h3>
+                <ul>
+                  <li>Настройка и ведение рекламной кампании до 30 000 запросов</li>
+                  <li>Выверение стратегии, детальная проработка запросов и многоуровневая кампания</li>
+                  <li>Консультация старшего маркетолога по поддержке продаж - 3 часа в месяц</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Разработка названия, 40 000 руб</h3>
+                <ul>
+                  <li>Нейминг для компании или продукта, 2 подачи по 8-12 названий</li>
+                  <li>Консультация у патентного поверенного</li>
+                  <li>Помощь по стилистике названия с консультацией старшего маркетолога</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Разработка презентации, 20 000 руб</h3>
+                <ul>
+                  <li>Промо- или бизнес-формат подачи, 12 листов</li>
+                  <li>Тексты и дизайн с нуля + работа редактора</li>
+                  <li>Консультация маркетолога по стилистике и контенту, чтобы попасть в цель</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Создание лендинга на тильда, 90 000 руб</h3>
+                <ul>
+                  <li>Экспресс-маркетинг, прототип, текст и дизайн для сайта</li>
+                  <li>Лендинг на Tilda до 10 экранов</li>
+                  <li>Консультация маркетолога по рекламе и продвижению проекта</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Создание многостраничника на тильда, 145 000 руб</h3>
+                <ul>
+                  <li>Экспресс-маркетинг, прототипы, тексты и дизайн для многостраничника</li>
+                  <li>Сайт на Tilda до 7 страниц с наполнением</li>
+                  <li>Консультация маркетолога по рекламе и продвижению проекта</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="main-calc__right-total" id="calc-total-startup">
+            <div class="main-calc__right-total-text">Итого:</div>
+            <div class="main-calc__right-total--sum"><span class="total-sum">0</span> рублей</div>
+          </div>
+        </div>
+      </div>
+      <div id="main-calc-small" class="tab_content main-calc__content">
+        <div class="main-calc__left">
+          <div class="main-calc__left-content">
+            <div class="main-calc__left-header">Как мы можем вам помочь?</div>
+            <form>
+              <div class="main-calc__left-check-block">
+                <label class="main-calc__left-check">Аудит вашего бренда или рекламной кампании
+                  <input type="checkbox" class="check-highload" name="highload" value="12000">
+                  <input type="text" class="check-highload-hidden" name="label1" value="Аудит вашего бренда или рекламной кампании">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>12000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Консультация по маркетингу
+                  <input type="checkbox" class="check-highload" name="highload" value="12000">
+                  <input type="text" class="check-highload-hidden" name="label2" value="Консультация по маркетингу">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>12000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Ведение социальных сетей
+                  <input type="checkbox" class="check-highload" name="highload" value="50000">
+                  <input type="text" class="check-highload-hidden" name="label3" value="Ведение социальных сетей">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>50000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Ведение рекламы Я.Директ
+                  <input type="checkbox" class="check-highload" name="highload" value="65000">
+                  <input type="text" class="check-highload-hidden" name="label4" value="Ведение рекламы Я.Директ">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>65000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Разработка презентации
+                  <input type="checkbox" class="check-highload" name="highload" value="20000">
+                  <input type="text" class="check-highload-hidden" name="label5" value="Разработка презентации">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>20000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Создание промо-лендинга на MODX
+                  <input type="checkbox" class="check-highload" name="highload" value="150000">
+                  <input type="text" class="check-highload-hidden" name="label6" value="Создание промо-лендинга на MODX">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>150000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Создание многостраничника на MODX
+                  <input type="checkbox" class="check-highload" name="highload" value="380000">
+                  <input type="text" class="check-highload-hidden" name="label7" value="Создание многостраничника на MODX">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>380000</span> рублей</div>
+                </label>
+              </div>
+              <div class="main-calc__left-header main-calc__left-header--middle">Примерный бюджет в месяц на рекламу
+              </div>
+              <div class="main-calc__left-price-gradient">
+                <span class="main-calc__left-price"><span id="main-calc-range-price-2">200 000</span> рублей</span>
+              </div>
+              <div id="range-2" class="main-calc-range"></div>
+              <div class="main-calc__left-range">
+                <div class="main-calc__left-range--sum">100 000 руб.</div>
+                <div class="main-calc__left-range--sum">300 000 руб.</div>
+              </div>
+              <div class="main-calc__left-btn">
+                <a href="#calc-total-small" class="main-calc__left-btn--culc">Рассчитать</a>
+                <div class="main-calc__left-btn--reset">Сбросить</div>
+              </div>
+            </form>
+          </div>
+          <div class="main-calc__left-description">
+            <div>Для рекламного бюджета более 100 000 рублей стоимость услуг считается дополнительно</div>
+          </div>
+        </div>
+        <div class="main-calc__right">
+          <div class="main-calc__right-content nano">
+            <div class="nano-content">
+              <div class="main-calc__right-img">Для расчета задайте<br>условия</div>
+              <div class="main-calc__right-item">
+                <h3>Аудит вашего бренда или рекламной кампании, 12 000 руб</h3>
+                <ul>
+                  <li>Первичное интервью с клиентом, определение целей и задач проекта</li>
+                  <li>Исследование и проведение аудита, подготовка итоговой презентации</li>
+                  <li>Встреча 1,5 часа с презентацией аудита</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Консультация по маркетингу, 12 000 руб</h3>
+                <ul>
+                  <li>Помощь по маркетинговой и диджитал-стратегии, по доработке продукта</li>
+                  <li>Исследование, маркетинговое проектирование, подготовка итоговой презентации</li>
+                  <li>Встреча 1,5 часа с презентацией маркетинговой работы</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Ведение социальных сетей, 50 000 руб/мес</h3>
+                <ul>
+                  <li>Создание контент-плана и выстраивание коммуникации в сети</li>
+                  <li>1 соцсеть, 2 поста в неделю, сочный визуал</li>
+                  <li>Усиленная монетизация – настройка таргетированной рекламы, 20 000/мес</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Ведение рекламы в Я.директ, 65 000 руб/мес</h3>
+                <ul>
+                  <li>Настройка и ведение рекламной кампании до 30 000 запросов</li>
+                  <li>Выверение стратегии, детальная проработка запросов и многоуровневая кампания</li>
+                  <li>Консультация старшего маркетолога по поддержке продаж - 3 часа в месяц</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Разработка названия, 40 000 руб</h3>
+                <ul>
+                  <li>Нейминг для компании или продукта, 2 подачи по 8-12 названий</li>
+                  <li>Консультация у патентного поверенного</li>
+                  <li>Помощь по стилистике названия с консультацией старшего маркетолога</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Разработка презентации, 20 000 руб</h3>
+                <ul>
+                  <li>Промо- или бизнес-формат подачи, 12 листов</li>
+                  <li>Тексты и дизайн с нуля + работа редактора</li>
+                  <li>Консультация маркетолога по стилистике и контенту, чтобы попасть в цель</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Создание промо-лендинга на MODX, 150 000 руб</h3>
+                <ul>
+                  <li>Экспресс-маркетинг, прототип, текст и дизайн для сайта</li>
+                  <li>Лендинг на профессиональной системе до 10 экранов</li>
+                  <li>Консультация маркетолога по рекламе и продвижению проекта</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Создание многостраничника на MODX, 380 000 руб</h3>
+                <ul>
+                  <li>Глубинные маркетинговые исследования, прототипы, тексты и дизайн для многостраничника.
+                    Помощь по позиционированию услуги/продукта
+                  </li>
+                  <li>Сайт на профессиональной системе до 7 страниц с наполнением и вау-дизайном</li>
+                  <li>Поэтапная маркетинговая стратегия в онлайн</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="main-calc__right-total" id="calc-total-small">
+            <div class="main-calc__right-total-text">Итого:</div>
+            <div class="main-calc__right-total--sum"><span class="total-sum">0</span> рублей</div>
+          </div>
+        </div>
+      </div>
+      <div id="main-calc-big" class="tab_content main-calc__content">
+        <div class="main-calc__left">
+          <div class="main-calc__left-content">
+            <div class="main-calc__left-header">Как мы можем вам помочь?</div>
+            <form>
+              <div class="main-calc__left-check-block">
+                <label class="main-calc__left-check">Аудит вашего бренда или рекламной кампании
+                  <input type="checkbox" class="check-highload" name="highload" value="12000">
+                  <input type="text" class="check-highload-hidden" name="label1" value="Аудит вашего бренда или рекламной кампании">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>12000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Консультация по маркетингу
+                  <input type="checkbox" class="check-highload" name="highload" value="12000">
+                  <input type="text" class="check-highload-hidden" name="label2" value="Консультация по маркетингу">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>12000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Ведение социальных сетей
+                  <input type="checkbox" class="check-highload" name="highload" value="75000">
+                  <input type="text" class="check-highload-hidden" name="label3" value="Ведение социальных сетей">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>75000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Ведение рекламы в Я.Директ
+                  <input type="checkbox" class="check-highload" name="highload" value="80000">
+                  <input type="text" class="check-highload-hidden" name="label4" value="Ведение рекламы в Я.Директ">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>80000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Разработка презентации
+                  <input type="checkbox" class="check-highload" name="highload" value="20000">
+                  <input type="text" class="check-highload-hidden" name="label5" value="Разработка презентации">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>20000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Создание лендинга на MODX
+                  <input type="checkbox" class="check-highload" name="highload" value="150000">
+                  <input type="text" class="check-highload-hidden" name="label6" value="Создание лендинга на MODX">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>150000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Создание многостраничника на MODX
+                  <input type="checkbox" class="check-highload" name="highload" value="380000">
+                  <input type="text" class="check-highload-hidden" name="label7" value="Создание многостраничника на MODX">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>380000</span> рублей</div>
+                </label>
+                <label class="main-calc__left-check">Создание интернет-магазина на MODX
+                  <input type="checkbox" class="check-highload" name="highload" value="470000">
+                  <input type="text" class="check-highload-hidden" name="label8" value="Создание интернет-магазина на MODX">
+                  <span class="highload2"></span>
+                  <div class="main-calc__left-check--sum"><span>470000</span> рублей</div>
+                </label>
+              </div>
+              <div class="main-calc__left-header main-calc__left-header--middle">Примерный бюджет в месяц на рекламу
+              </div>
+              <div class="main-calc__left-price-gradient">
+                <span class="main-calc__left-price"><span id="main-calc-range-price-3">450 000</span> рублей</span>
+              </div>
+              <div id="range-3" class="main-calc-range"></div>
+              <div class="main-calc__left-range">
+                <div class="main-calc__left-range--sum">300 000 руб.</div>
+                <div class="main-calc__left-range--sum">500 000 руб.</div>
+              </div>
+              <div class="main-calc__left-btn">
+                <a href="#calc-total-big" class="main-calc__left-btn--culc">Рассчитать</a>
+                <div class="main-calc__left-btn--reset">Сбросить</div>
+              </div>
+            </form>
+          </div>
+          <div class="main-calc__left-description">
+            <div>Для рекламного бюджета более 100 000 рублей стоимость услуг считается дополнительно</div>
+          </div>
+        </div>
+        <div class="main-calc__right">
+          <div class="main-calc__right-content nano">
+            <div class="nano-content">
+              <div class="main-calc__right-img">Для расчета задайте<br>условия</div>
+              <div class="main-calc__right-item">
+                <h3>Аудит вашего бренда или рекламной кампании, 12 000 руб</h3>
+                <ul>
+                  <li>Первичное интервью с клиентом, определение целей и задач проекта</li>
+                  <li>Исследование и проведение аудита, подготовка итоговой презентации</li>
+                  <li>Встреча 1,5 часа с презентацией аудита</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Консультация по маркетингу, 12 000 руб</h3>
+                <ul>
+                  <li>Помощь по маркетинговой и диджитал-стратегии, по доработке продукта</li>
+                  <li>Исследование, маркетинговое проектирование, подготовка итоговой презентации</li>
+                  <li>Встреча 1,5 часа с презентацией маркетинговой работы</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Ведение социальных сетей, 75 000 руб/мес</h3>
+                <ul>
+                  <li>Выстраивание контент-плана и нестандартной стратегии продвижения в соцсети</li>
+                  <li>3 соцсети, 5 постов в неделю, сочный визуал и консультация по продвижению бренда.
+                    Пиар-продвижение.
+                  </li>
+                  <li>Усиленная монетизация – настройка таргетированной рекламы, 25 000/мес</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Ведение рекламы в Я.директ, 80 000 руб/мес</h3>
+                <ul>
+                  <li>Настройка и ведение рекламной кампании до 30 000 запросов</li>
+                  <li>Выверение стратегии, детальная проработка запросов и многоуровневая кампания.
+                    Проработка визуала и рекламных преимуществ.
+                  </li>
+                  <li>Консультация старшего маркетолога по поддержке продаж - 3 часа в месяц</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Разработка презентации, 20 000 руб</h3>
+                <ul>
+                  <li>Промо- или бизнес-формат подачи, 12 листов</li>
+                  <li>Тексты и дизайн с нуля + работа редактора</li>
+                  <li>Консультация маркетолога по стилистике и контенту, чтобы попасть в цель</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Создание лендинга на MODX, 150 000 руб</h3>
+                <ul>
+                  <li>Экспресс-маркетинг, прототип, текст и дизайн для сайта</li>
+                  <li>Лендинг на профессиональной системе до 10 экранов</li>
+                  <li>Консультация маркетолога по рекламе и продвижению проекта</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Создание многостраничника на MODX, 380 000 руб</h3>
+                <ul>
+                  <li>Глубинные маркетинговые исследования, прототипы, тексты и дизайн для многостраничника</li>
+                  <li>Сайт на профессиональной системе до 7 страниц с наполнением и вау-дизайном</li>
+                  <li>Поэтапная маркетинговая стратегия в онлайн</li>
+                </ul>
+              </div>
+              <div class="main-calc__right-item">
+                <h3>Создание интернет-магазина на MODX, 470 000 руб</h3>
+                <ul>
+                  <li>Глубинные маркетинговые исследования, прототипирование и проектирование
+                    удобства пользования интернет-магазином
+                  </li>
+                  <li>Сайт на профессиональной системе до 11 страниц с наполнением и функциональ-
+                    ным дизайном
+                  </li>
+                  <li>Поэтапная маркетинговая стратегия в онлайн, рекомендации по продвижению</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="main-calc__right-total" id="calc-total-big">
+            <div class="main-calc__right-total-text">Итого:</div>
+            <div class="main-calc__right-total--sum"><span class="total-sum">0</span> рублей</div>
+          </div>
+        </div>
+      </div>
+      <div class="main-calc__right-total-btn">
+        <button class="main-calc__right-total-btn--purple popup-open">
+          <span class="tilda-btn">
+            <span class="tilda--calc">~ </span>Отправить заказ<span class="tilda--calc"> ~</span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div class="main-calc__right-header">
+      Нужен
+      <span class="main-calc__right-header--pink">индивидуальный расчет</span>
+      по вашим параметрам?
+    </div>
+    <div class="main-calc__left-total-btn">
+      <button class="main-calc__left-total-btn--black">
+        <span class="main-calc__left-total-btn-text">Заявка на индивидуальный расчет</span>
+      </button>
+    </div>
+  </div>
+</section>
+<!--Modal window-->
+<div class="popup-fade">
+  <div class="popup">
+    <span class="popup-close">
+    </span>
+    <h2 class="white block_h block_h--black"><span class="tilda-wr"><span class="tilda">П</span>одтвердите</span> свой
+      выбор</h2>
+    <div class="popup-text popup-text-data">Ваши данные</div>
+    <form id="popup-form" method="post" action="#">
+      <div class="popup-form-inputs">
+        <div class="popup-form-input">
+          <input placeholder="Имя *" required class="popup-input-main popup-form-name" type="text" id="user_name"
+                 name="username">
+        </div>
+        <div class="popup-form-input">
+          <input placeholder="Телефон *" required class="popup-input-main popup-form-tel" type="text" id="user_tel"
+                 name="usertel">
+        </div>
+        <div class="popup-form-input popup-form-input--right">
+          <input placeholder="E-mail *" required class="popup-input-main popup-form-mail" type="email" id="user_mail"
+                 name="usermail">
+        </div>
+      </div>
+      <div class="popup-text popup-text-services">Услуги</div>
+      <div class="popup-check-services"></div>
+      <label for="user_budget" class="popup-text popup-text-price">Примерный бюджет в месяц на рекламу: </label>
+      <input class="popup-total popup-total-budget" type="text" id="user_budget" name="userbudget" value="0 рублей"
+             readonly>
+      <label for="user_total" class="popup-text popup-text-price">Итого:</label>
+      <input class="popup-total popup-total-sum" type="text" id="user_total" name="usertotal" value="0 рублей" readonly>
+      <div class="popup-btn">
+        <div class="popup-btn-send">
+          <button class="main-calc__right-total-btn--purple">
+            <span class="tilda-btn popup-btn-send--white">
+              <span class="tilda--calc">~ </span>Отправить заказ<span class="tilda--calc"> ~</span>
+            </span>
+          </button>
+        </div>
+        <div class="popup-btn-back">
+          <button class="popup-btn-back--purple">
+            <span class="popup-btn-back--text">Вернуться и внести изменения</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="t/js/jquery-3.3.1.min.js"></script>
+<script src="t/js/jquery-ui.min.js"></script>
+<script src="t/js/jquery.ui.touch-punch.min.js"></script>
+<script src="t/js/jquery.nanoscroller.min.js"></script>
+<script src="t/js/dragscroll.js"></script>
+<script src="t/js/calc.js"></script>
+</body>
+</html>
